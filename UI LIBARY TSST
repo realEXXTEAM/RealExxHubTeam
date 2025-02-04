@@ -167,7 +167,6 @@ local buttons = {
     {name = "🛑 Suck", r6 = "https://pastebin.com/raw/SymCfnAW", r15 = "https://pastebin.com/raw/p8yxRfr4"},
     {name = "🛑 Get Suc", r6 = "https://pastebin.com/raw/FPu4e2Qh", r15 = "https://pastebin.com/raw/DyPP2tAF"},
     {name = "🛑 Jerk", r6 = "https://pastefy.app/wa3v2Vgm/raw", r15 = "https://pastefy.app/YZoglOyJ/raw"}
-    {name = "🛑 SuperRingV3", r6 = "https://raw.githubusercontent.com/realEXXTEAM/SuperRingv3Script/refs/heads/main/SUPER-RINGG-V3", r15 = "https://raw.githubusercontent.com/realEXXTEAM/SuperRingv3Script/refs/heads/main/SUPER-RINGG-V3"}
 }
 
 for _, buttonData in ipairs(buttons) do
