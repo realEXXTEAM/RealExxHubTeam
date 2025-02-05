@@ -162,11 +162,11 @@ layout.Parent = scrollingFrame
 
 -- Buttons Data
 local buttons = {
-    {name = "🛑 Ngewe/Bang V2 🛑", r6 = "https://pastebin.com/raw/9YVfEBDD", r15 = "https://pastebin.com/raw/YMm4zjnf"},
-    {name = "🛑 Dapatkan Ngewe 🛑", r6 = "https://pastebin.com/raw/zHbw7ND1", r15 = "https://pastebin.com/raw/7hvcjDnW"},
-    {name = "🛑 Sepong/Suck🛑", r6 = "https://pastebin.com/raw/SymCfnAW", r15 = "https://pastebin.com/raw/p8yxRfr4"},
-    {name = "🛑 Sepong Player/Get Suck 🛑", r6 = "https://pastebin.com/raw/FPu4e2Qh", r15 = "https://pastebin.com/raw/DyPP2tAF"},
-    {name = "🛑 Ngocok Peli/Jerk 🛑", r6 = "https://pastefy.app/wa3v2Vgm/raw", r15 = "https://pastefy.app/YZoglOyJ/raw"}
+    {name = "🔰 Ngewe/Bang V2 🔰", r6 = "https://pastebin.com/raw/9YVfEBDD", r15 = "https://pastebin.com/raw/YMm4zjnf"},
+    {name = "🔰 Dapatkan Ngewe 🔰", r6 = "https://pastebin.com/raw/zHbw7ND1", r15 = "https://pastebin.com/raw/7hvcjDnW"},
+    {name = "🔰 Sepong/Suck 🔰", r6 = "https://pastebin.com/raw/Suck fnAW", r15 = "https://pastebin.com/raw/p8yxRfr4"},
+    {name = "🔰 Sepong Player/Get Suck 🔰", r6 = "https://pastebin.com/raw/FPu4e2Qh", r15 = "https://pastebin.com/raw/DyPP2tAF"},
+    {name = "🔰 Ngocok Peli/Jerk 🔰", r6 = "https://pastefy.app/wa3v2Vgm/raw", r15 = "https://pastefy.app/YZoglOyJ/raw"}
 }
 
 for _, buttonData in ipairs(buttons) do
