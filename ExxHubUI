@@ -132,7 +132,7 @@ local Toggle = MainTab:CreateToggle({
 
 
 local TPTab = Window:CreateTab("🔨Tools Item", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Ngocok/Jerk V2")
+local MainSection = MainTab:CreateSection("Jerk V2")
 
 local Button1 = TPTab:CreateButton({
    Name = "Jerk Support R6",
