@@ -18,7 +18,7 @@ local Window = Rayfield:CreateWindow({
    KeySettings = {
       Title = "Key | EXX Hub",
       Subtitle = "Key Syteam",
-      Note = "Get Key In My Discrod https://discord.gg/ffqWZ3v3",
+      Note = "Get Key In My Discord https://discord.gg/ffqWZ3v3",
       FileName = "KEY_929274820192028838291083729192833818", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
@@ -132,8 +132,8 @@ local Toggle = MainTab:CreateToggle({
 
 
 local TPTab = Window:CreateTab("🔨Tools Item", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Jerk V2")
 
+local MainSection = MainTab:CreateSection("Jerk V2")
 local Button1 = TPTab:CreateButton({
    Name = "Jerk Support R6",
    Callback = function()
