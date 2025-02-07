@@ -43,12 +43,7 @@ Rayfield:Notify({
    },
 },
 })
-local Button2 = TPTab:CreateButton({
-   Name = "Jerk V2",
-   Callback = function()
-        --Teleport2
-   end,
-})
+
 
 
 local TPTab = Window:CreateTab("🏝 Teleports", nil) -- Title, Image
