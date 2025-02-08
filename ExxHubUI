@@ -26,14 +26,42 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local MainTab = Window:CreateTab("🛡 Ability", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Ability Speed And Jump")
+local MainTab = Window:CreateTab("🛡 Ability 🛡", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
 
+local Button = MainTab:CreateButton({
+   Name = "Infinite Jump",
+   Callback = function()
+       --Toggles the infinite jump between on or off on every script run
+_G.infinjump = not _G.infinjump
 
+if _G.infinJumpStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.infinJumpStarted = true
+	
+	--Notifies readiness
+	game.StarterGui:SetCore("SendNotification", {Title="Error"; Text="Infinite Jump Not Activated!"; Duration=5;})
+
+	--The actual infinite jump
+	local plr = game:GetService('Players').LocalPlayer
+	local m = plr:GetMouse()
+	m.KeyDown:connect(function(k)
+		if _G.infinjump then
+			if k:byte() == 32 then
+			humanoid = game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
+			humanoid:ChangeState('Jumping')
+			wait()
+			humanoid:ChangeState('Seated')
+			end
+		end
+	end)
+end
+   end,
+})
 
 local Slider = MainTab:CreateSlider({
-   Name = "WalkSpeed",
-   Range = {1, 1000},
+   Name = "WalkSpeed Slider",
+   Range = {1, 750},
    Increment = 1,
    Suffix = "Speed",
    CurrentValue = 16,
@@ -44,8 +72,8 @@ local Slider = MainTab:CreateSlider({
 })
 
 local Slider = MainTab:CreateSlider({
-   Name = "JumpPower",
-   Range = {1, 1000},
+   Name = "JumpPower Slider",
+   Range = {1, 750},
    Increment = 1,
    Suffix = "Speed",
    CurrentValue = 16,
@@ -55,20 +83,9 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local Dropdown = MainTab:CreateDropdown({
-   Name = "Select Area",
-   Options = {"Starter World","Pirate Island","Pineapple Paradise"},
-   CurrentOption = {"Starter World"},
-   MultipleOptions = false,
-   Flag = "dropdownarea", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Option)
-        print(Option)
-   end,
-})
-
 local Input = MainTab:CreateInput({
    Name = "Walkspeed",
-   PlaceholderText = "1-500",
+   PlaceholderText = "1-750",
    RemoveTextAfterFocusLost = true,
    Callback = function(Text)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Text)
@@ -78,17 +95,16 @@ local Input = MainTab:CreateInput({
 local OtherSection = MainTab:CreateSection("Other")
 
 local Toggle = MainTab:CreateToggle({
-   Name = "ESP PLAYERS",
+   Name = "ESP PLAYER",
    CurrentValue = false,
-   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "not support tunggu update", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
         print("ESP ERROR")
    end,
 })
 
 
-local TPTab = Window:CreateTab("🔨Tools Item", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Jerk V2")
+local TPTab = Window:CreateTab("❗ Ngocok/Jerk V2 ❗", nil) -- Title, Image
 
 local Button1 = TPTab:CreateButton({
    Name = "Jerk Support R6",
@@ -98,17 +114,30 @@ local Button1 = TPTab:CreateButton({
 })
 
 local Button2 = TPTab:CreateButton({
-   Name = "Pirate Island",
+   Name = "Jerk Support R15",
    Callback = function()
-        --Teleport2
+        loadstring(game:HttpGet("https://pastebin.com/raw/YMm4zjnf"))()
    end,
 })
 
-local Button3 = TPTab:CreateButton({
-   Name = "Pineapple Paradise",
-   Callback = function()
-        --Teleport3
+
+local TPTab = Window:CreateTab("❗Ngewe/Bang v2❗", nil) -- Title, Image
+
+local TPTab = Window:CreateTab("❗Sepong/Suck v2❗", nil) -- Title, Image
+
+local TPTab = Window:CreateTab("❗DapatkanSepong/GetSuckv2❗", nil) -- Title, Image
+
+local TPTab = Window:CreateTab("⚠️CMDS ADMIN + KEYBOARD⚠️", nil) -- Title, Image
+
+local Dropdown = MainTab:CreateDropdown({
+   Name = "Pilih Admin Script",
+   Options = {"Starter World","Pirate Island","Pineapple Paradise"},
+   CurrentOption = {"Infinite Yield"},
+   MultipleOptions = false,
+   Flag = "dropdownarea", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Option)
+        print(Option)
    end,
 })
 
-local TPTab = Window:CreateTab("🎲 Misc", nil) -- Title, Image
+
