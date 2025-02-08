@@ -116,28 +116,31 @@ local Button1 = TPTab:CreateButton({
 local Button2 = TPTab:CreateButton({
    Name = "Jerk Support R15",
    Callback = function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/YMm4zjnf"))()
+        loadstring(game:HttpGet("https://pastefy.app/YZoglOyJ/raw"))()
    end,
 })
 
 
 local TPTab = Window:CreateTab("❗Ngewe/Bang v2❗", nil) -- Title, Image
+local Button2 = TPTab:CreateButton({
+   Name = "Jerk Support R6",
+   Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/9YVfEBDD"))()
+   end,
+})
+
+local Button2 = TPTab:CreateButton({
+   Name = "Jerk Support R15",
+   Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/YMm4zjnf"))()
+   end,
+})
+
 
 local TPTab = Window:CreateTab("❗Sepong/Suck v2❗", nil) -- Title, Image
 
 local TPTab = Window:CreateTab("❗DapatkanSepong/GetSuckv2❗", nil) -- Title, Image
 
 local TPTab = Window:CreateTab("⚠️CMDS ADMIN + KEYBOARD⚠️", nil) -- Title, Image
-
-local Dropdown = MainTab:CreateDropdown({
-   Name = "Pilih Admin Script",
-   Options = {"Starter World","Pirate Island","Pineapple Paradise"},
-   CurrentOption = {"Infinite Yield"},
-   MultipleOptions = false,
-   Flag = "dropdownarea", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Option)
-        print(Option)
-   end,
-})
 
 
