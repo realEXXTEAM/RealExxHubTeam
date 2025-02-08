@@ -26,42 +26,14 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local MainTab = Window:CreateTab("🏠 Home", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Main")
+local MainTab = Window:CreateTab("🛡 Ability", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Ability Speed And Jump")
 
-local Button = MainTab:CreateButton({
-   Name = "Infinite Jump Toggle",
-   Callback = function()
-       --Toggles the infinite jump between on or off on every script run
-_G.infinjump = not _G.infinjump
 
-if _G.infinJumpStarted == nil then
-	--Ensures this only runs once to save resources
-	_G.infinJumpStarted = true
-	
-	--Notifies readiness
-	game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Infinite Jump Activated!"; Duration=5;})
-
-	--The actual infinite jump
-	local plr = game:GetService('Players').LocalPlayer
-	local m = plr:GetMouse()
-	m.KeyDown:connect(function(k)
-		if _G.infinjump then
-			if k:byte() == 32 then
-			humanoid = game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
-			humanoid:ChangeState('Jumping')
-			wait()
-			humanoid:ChangeState('Seated')
-			end
-		end
-	end)
-end
-   end,
-})
 
 local Slider = MainTab:CreateSlider({
-   Name = "WalkSpeed Slider",
-   Range = {1, 350},
+   Name = "WalkSpeed",
+   Range = {1, 1000},
    Increment = 1,
    Suffix = "Speed",
    CurrentValue = 16,
@@ -72,8 +44,8 @@ local Slider = MainTab:CreateSlider({
 })
 
 local Slider = MainTab:CreateSlider({
-   Name = "JumpPower Slider",
-   Range = {1, 350},
+   Name = "JumpPower",
+   Range = {1, 1000},
    Increment = 1,
    Suffix = "Speed",
    CurrentValue = 16,
@@ -106,18 +78,18 @@ local Input = MainTab:CreateInput({
 local OtherSection = MainTab:CreateSection("Other")
 
 local Toggle = MainTab:CreateToggle({
-   Name = "Auto Farm",
+   Name = "ESP PLAYERS",
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-        print("FARMING")
+        print("ESP ERROR")
    end,
 })
 
 
 local TPTab = Window:CreateTab("🔨Tools Item", nil) -- Title, Image
-
 local MainSection = MainTab:CreateSection("Jerk V2")
+
 local Button1 = TPTab:CreateButton({
    Name = "Jerk Support R6",
    Callback = function()
