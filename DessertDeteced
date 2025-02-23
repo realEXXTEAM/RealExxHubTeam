@@ -1,0 +1,145 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/realEXXTEAM/RealExxHubTeam/refs/heads/main/source.io'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "EXX Hub | Dessert Detected",
+   LoadingTitle = "Join By Discord https://discord.gg/ffqWZ3v3",
+   LoadingSubtitle = "by RealExxTeam",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Exx Hub | Dessert "
+    },
+   Discord = {
+      Enabled = false,
+      Invite = "https://discord.gg/ffqWZ3v3", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Key | EXX Hub",
+      Subtitle = "Key Syteam",
+      Note = "Get Key In My Discord https://discord.gg/ffqWZ3v3",
+      FileName = "KEY_929274820192028838291083729192833818", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://pastebin.com/raw/Etn2P5Uh"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("🛡 Ability 🛡", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+   Name = "Infinite Jump",
+   Callback = function()
+       --Toggles the infinite jump between on or off on every script run
+_G.infinjump = not _G.infinjump
+
+if _G.infinJumpStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.infinJumpStarted = true
+	
+	--Notifies readiness
+	game.StarterGui:SetCore("SendNotification", {Title="Error"; Text="Infinite Jump Not Activated!"; Duration=5;})
+
+	--The actual infinite jump
+	local plr = game:GetService('Players').LocalPlayer
+	local m = plr:GetMouse()
+	m.KeyDown:connect(function(k)
+		if _G.infinjump then
+			if k:byte() == 32 then
+			humanoid = game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
+			humanoid:ChangeState('Jumping')
+			wait()
+			humanoid:ChangeState('Seated')
+			end
+		end
+	end)
+end
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "WalkSpeed Slider",
+   Range = {1, 750},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "sliderws", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "JumpPower Slider",
+   Range = {1, 750},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "sliderjp", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+   end,
+})
+
+local Input = MainTab:CreateInput({
+   Name = "Walkspeed",
+   PlaceholderText = "1-750",
+   RemoveTextAfterFocusLost = true,
+   Callback = function(Text)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Text)
+   end,
+})
+
+local OtherSection = MainTab:CreateSection("Other")
+
+local Toggle = MainTab:CreateToggle({
+   Name = "ESP PLAYER",
+   CurrentValue = false,
+   Flag = "not support tunggu update", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        print("ESP ERROR")
+   end,
+})
+
+
+local TPTab = Window:CreateTab("❗ Ngocok/Jerk V2 ❗", nil) -- Title, Image
+
+local Button1 = TPTab:CreateButton({
+   Name = "Jerk Support R6",
+   Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))()
+   end,
+})
+
+local Button2 = TPTab:CreateButton({
+   Name = "Jerk Support R15",
+   Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/YZoglOyJ/raw"))()
+   end,
+})
+
+
+local TPTab = Window:CreateTab("❗Ngewe/Bang v2❗", nil) -- Title, Image
+local Button2 = TPTab:CreateButton({
+   Name = "Jerk Support R6",
+   Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/9YVfEBDD"))()
+   end,
+})
+
+local Button2 = TPTab:CreateButton({
+   Name = "Jerk Support R15",
+   Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/YMm4zjnf"))()
+   end,
+})
+
+
+local TPTab = Window:CreateTab("❗Sepong/Suck v2❗", nil) -- Title, Image
+
+local TPTab = Window:CreateTab("❗DapatkanSepong/GetSuckv2❗", nil) -- Title, Image
+
+local TPTab = Window:CreateTab("⚠️CMDS ADMIN + KEYBOARD⚠️", nil) -- Title, Image
+
