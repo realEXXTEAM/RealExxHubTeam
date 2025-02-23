@@ -1,1 +1,5 @@
-game.StarterGui:SetCore("SendNotification", {Title="Error"; Text="⛔ Sedang ada perbaikan ⛔"; Duration=15;})
+game.StarterGui:SetCore("SendNotification", {Title="Error"; Text="⛔ Sedang ada perbaikan ⛔"; Duration=5;})
+
+
+elseif game.PlaceId == 7177812860 then
+game.StarterGui:SetCore("SendNotification", {Title="Error"; Text="⛔ Sedang ada perbaikan ⛔"; Duration=5;})
