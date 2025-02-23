@@ -1,4 +1,1 @@
-
-game.StarterGui:SetCore("SendNotification", {Title="Error"; Text="⛔ Sedang ada perbaikan ⛔"; Duration=5;})
-
-game.Players.LocalPlayer:Kick("⚠️ Detect "..__f['__executor']..", This executor not support please change to highest level executor. ⚠️") end;]]
+game.StarterGui:SetCore("SendNotification", {Title="ExxHub"; Text="COMING SOON TO UPDATE"; Duration=5;})
