@@ -16,3 +16,16 @@ for i,v in next, registry do
       end
    end
 end
+
+local TextChatService = game:GetService("TextChatService")
+
+while true do
+    task.wait(5)
+
+    local message = Instance.new("TextChatMessage")
+    message.Text = "GG"
+    message.TextSource = nil
+
+    TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage(message.Text)
+end
+
