@@ -1,2 +1,18 @@
-game.StarterGui:SetCore("SendNotification", {Title="@CrafterMC7"; Text="Thank's using my scripts"; Duration=5;})
+game.StarterGui:SetCore("SendNotification", {Title="ExxHub"; Text="Thank's Using My Script"; Duration=5;})
 loadstring(game:HttpGet("https://pastebin.com/raw/sH0Sd8qP"))()
+
+game.StarterGui:SetCore("SendNotification", {Title="ExxHub"; Text="Bypass Anti-Kick"; Duration=5;})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Anti-Kick/main/Anti-Kick.lua"))()
+
+game.StarterGui:SetCore("SendNotification", {Title="ExxHub"; Text="Bypass Anti-Cheat"; Duration=5;})
+local registry = getreg()
+
+for i,v in next, registry do
+  if type(v) == 'function' then
+   local funcinfo = getinfo(v)
+   if funcinfo.name == 'kick' then
+    hookfunction(funcinfo.func,function(...) return nil end)
+    print('hooked') 
+      end
+   end
+end
